@@ -19,7 +19,7 @@
     <marquee behavior="" direction="">    
             <p>
                 {%for item in announcement%}
-                {{item.message}}&nbsp;&nbsp;{% if item.link_exist == True %} Link: <a href="{{item.link}}">Click Here</a>{% endif %} &nbsp;&nbsp;
+                {{item.message}}&nbsp;&nbsp;{% if item.link_exist == True %} Link: <a href="{{item.link}}" target="_blank">Click Here</a>{% endif %} &nbsp;&nbsp;
                 {%endfor%}  
             </p>
     </marquee>
