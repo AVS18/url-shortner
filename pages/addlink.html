@@ -1,0 +1,21 @@
+{%extends 'dashboard.html'%}
+{%block content%}
+    <form action="/addlink" method="POST">
+        {%csrf_token%}
+        <div class="row">
+            <div class="col-sm form-group">
+                <label for="original">Add Link to short</label>
+                <input type="text" id="original" name="shortner_link" class="form-control">
+                <small>Leave empty if you want to randomly assign the shortner link</small>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm form-group">
+                <label for="original">Original Link to Redirect</label>
+                <input type="text" id="original" name="original_link" class="form-control" required>
+            </div>
+        </div>
+        <input type="submit" class="btn btn-outline-primary" value="Generate Shortner">
+    </form>
+
+{%endblock%}
